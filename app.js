@@ -20,8 +20,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);     //用户
+app.use('/user', usersRouter);     //用户
 app.use('/goods', goodsRouter);     //商品
 
 // catch 404 and forward to error handler
